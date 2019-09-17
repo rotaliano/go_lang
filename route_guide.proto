@@ -1,0 +1,16 @@
+syntax = "proto3";
+package example.protobuf;
+
+service RouteGuide {
+  rpc GetFeature(Point) returns (Feature) {}
+}
+
+message Point {
+  int32 latitude = 1;
+  int32 longitude = 2;
+}
+
+message Rectangle {
+  Point lo = 1;
+  Point hi = 2;
+}
